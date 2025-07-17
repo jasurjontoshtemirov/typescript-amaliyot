@@ -50,7 +50,7 @@
 // }
 
 // function greet(person:Person){
-//     return `Hello, ${person.name}, you are ${person.age} years old.`;
+    // return `Hello, ${person.name}, you are ${person.age} years old.`;
 // }
 
 // console.log(greet({name:"Jasurjon", age: 17}));
@@ -58,23 +58,43 @@
 
 
 
+// class Person{
+//     firstname:string;
+//     age:number;
+
+//     constructor(firstname:string, age:number){
+//         this.firstname=firstname;
+//         this.age=age;
+//     }
+
+//     greet(){
+//         return `Hello, ${this.firstname}!`
+//     }
+//     public getage():number{
+//         return this.age;    
+//     }
+
+// }
+
+// const person= new Person("Jasurjon",17);
+
+// console.log(person.greet());
+
 class Person{
     firstname:string;
     age:number;
 
-    constructor(firstname:string, age:number){
+    constructor(firstname:string,age:number){
         this.firstname=firstname;
         this.age=age;
     }
 
-    greet(){
-        return `Hello, ${this.firstname}!`
-    }
-    public getage():number{
-        return this.age;    
+    greet():string{
+        return `Hello, ${this.firstname}!`;
     }
 }
 
-const person= new Person("Jasurjon",17);
 
-console.log(person.greet());
+const odam= new Person("Jasurjon", 17);
+console.log(odam.greet());
+
