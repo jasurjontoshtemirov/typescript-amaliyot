@@ -43,16 +43,81 @@
 
 
 // Typle
-const person:[string,number]=["JasurjonToshtemirov",17];
+// const person:[string,number]=["JasurjonToshtemirov",17];
 
-person.push("Jizzax");
+// person.push("Jizzax");
 
-console.log(person);
-
-
-console.log(person[0]);
-console.log(person[1]);
-// console.log(person[2]);
+// console.log(person);
 
 
- 
+// console.log(person[0]);
+// console.log(person[1]);
+// // console.log(person[2]);
+
+
+// const person = ["Jasurjon", 17]
+
+// const admins: readonly number[] =[1,2,3,4,5]
+
+// admins.push(6)
+
+// console.log(admins);
+
+
+
+// const  person: (string | number)[] =["Jasurjon",17];
+
+// const [fullname ,age]=person
+
+
+// console.log(fullname);
+// // console.log(age);
+
+
+// enum Direction {
+//     Up = "up",
+//         Down = "Down",
+//         Left = "Left",
+//         Right = "Right"
+// }
+
+// function getDirection(direction: Direction) {
+//     if (direction === Direction.Up) {
+//         return "Yuqoriga burulish"
+//     } else if (direction === Direction.Down) {
+//         return "Pastga burilish"
+//     } else if (direction === Direction.Left) {
+//         return "Chapga burilish"
+//     } else if (direction === Direction.Right) {}
+// }
+
+// const moveUp = getDirection(Direction.Up)
+// console.log(moveUp);
+
+
+// const moveDown=getDirection(Direction.Down)
+// console.log(moveDown);
+
+
+enum StatusCode {
+    Ok = 200,
+    NOT_FOUND = 404,
+    INTERNAL_SERVER_ERROR = 500,
+}
+
+function handleRequest(url: string): StatusCode {
+    if (url === '/') {
+        return StatusCode.Ok
+    }
+    if (url === '/server-error') {
+        return StatusCode.INTERNAL_SERVER_ERROR
+    }
+    return StatusCode.NOT_FOUND
+}
+
+
+const homePage = handleRequest('/dawdwa')
+
+if (homePage === StatusCode.NOT_FOUND) {
+    console.log("404 Not Found")
+}
